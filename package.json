@@ -1,0 +1,27 @@
+{
+  "name": "node-promise",
+  "version": "0.0.1",
+  "description": "A wrapper for the built-in node modules that e.g. wrap fs.readFile in a Promise",
+  "main": "index.js",
+  "repository": "https://github.com/jonasthiesen/node-promise",
+  "author": "Jonas Thiesen <jonas.k.thiesen@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn build:watch",
+    "build": "babel src -d build --ignore **/*.test.js",
+    "build:watch": "babel src -w -d build --ignore **/*.test.js",
+    "prepublishOnly": "yarn build",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
